@@ -42,3 +42,26 @@ git clone https://github.com/tu-usuario/nonstop-Frontend.git
 cd nonstop-Frontend
 npm install
 npm run dev
+```
+
+La aplicación se ejecuta por defecto en: http://localhost:5173
+
+## Uso con y sin backend
+
+### Sin backend:
+- La aplicación funciona en modo local
+- Las estadísticas se guardan en localStorage
+- No es necesario iniciar sesión
+
+### Con backend activo:
+- Se habilita el registro y el login
+- Los resultados se guardan por usuario
+- El historial se obtiene desde la API
+- Endpoint esperado del backend: http://127.0.0.1:8000
+
+## Estado del proyecto
+Proyecto en desarrollo.
+Las funcionalidades principales están implementadas y se continúa trabajando en mejoras visuales y nuevas métricas.
+
+### Autor
+Desarrollado por Leo.
