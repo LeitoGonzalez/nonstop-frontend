@@ -14,6 +14,9 @@ El proyecto permite realizar sesiones de escritura, registrar estadísticas y vi
 - Soporte para múltiples idiomas
 - Uso sin cuenta mediante almacenamiento local
 
+![Pantalla de inicio](src/assets/screenshot1.png)
+![Estadísticas](src/assets/screenshot2.png)
+
 ## Tecnologías utilizadas
 
 ### Frontend
