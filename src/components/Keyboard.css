@@ -1,0 +1,31 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  user-select: none;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+}
+
+.key {
+  width: 35px;
+  height: 35px;
+  background: #222;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+
+.key.active {
+  background: #d8d8d8;
+  color: #000;
+  transform: translateY(3px);
+  box-shadow: none;
+}

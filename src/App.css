@@ -1,0 +1,477 @@
+/* =====================
+   BASE
+===================== */
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #292929;
+  color: #eee;
+  font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* =====================
+   LAYOUT GENERAL
+===================== */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =====================
+   BLOQUES PRINCIPALES
+===================== */
+
+.grafica,
+.palabras,
+.info {
+  width: 100%;
+  padding: 20px 24px;
+}
+
+.info {
+  display: flex;
+  gap: 32px;
+  font-size: 0.7rem;
+}
+
+/* =====================
+   PALABRAS
+===================== */
+.words {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  line-height: 1.7;
+  color: #d6d6d6;
+}
+
+.completed {
+  color: #666;
+}
+
+.correct {
+  color: #7fb069;
+}
+
+.incorrect {
+  color: #a35d5d;
+}
+
+.pending {
+  color: #aaa;
+}
+
+.char {
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.char.active {
+  border-bottom-color: currentColor;
+}
+
+.space {
+  display: inline-block;
+  width: 0.6ch;
+}
+
+
+/* =====================
+   TOP CONTROLS
+===================== */
+
+.top-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+/* inputs / selects */
+.top-controls select {
+  height: 36px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  padding: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* links / botones */
+.top-controls a {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.top-controls a:hover {
+  background: #555;
+}
+
+/* =====================
+   USER MENU
+===================== */
+
+.user-area {
+  position: relative;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+
+  border-radius: 50%;
+  background: #333;
+  border: 1px solid #444;
+
+  cursor: pointer;
+}
+
+.user-icon:hover {
+  background: #444;
+}
+
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 46px;
+
+  width: 180px;
+  background: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.username {
+  font-weight: bold;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #444;
+  font-size: 0.9rem;
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.dropdown button:hover {
+  background: #333;
+}
+
+/* =====================
+   STATS
+===================== */
+
+.stats-container {
+  flex-direction: column;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.stats-table {
+  padding-top: 100px;
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.stats-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #333;
+  font-size: 0.95rem;
+}
+
+.stats-table tr:last-child td {
+  border-bottom: none;
+}
+
+.good {
+  color: #7fb069;
+  font-weight: bold;
+}
+
+.bad {
+  color: #a35d5d;
+  font-weight: bold;
+}
+
+.stats-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.stats-left {
+  flex: 1;
+  max-height: 80vh;      
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.stats-right {
+  flex: 1;
+  height: 80vh;          
+}
+
+
+.stats-left::-webkit-scrollbar {
+  width: 6px;
+}
+
+.stats-left::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.stats-left::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* =====================
+   BOTÓN VOLVER
+===================== */
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+
+
+/* =====================
+   LOGIN
+===================== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  justify-content: center;
+  background: #1a1a1a;
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-container h2 {
+  margin-bottom: 8px;
+}
+
+.login-container input {
+  height: 42px;
+  padding: 0 12px;
+
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+
+  color: white;
+  font-size: 0.95rem;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.login-container button {
+  height: 42px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #2563eb;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 12px;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-btn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; 
+}
+
+.register-btn {
+  flex: 1;
+  display: flex;
+  background: transparent;
+  display: flex;
+  align-items: center; 
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+
+
+/* =====================
+   REGISTER
+===================== */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 380px;
+  justify-content: center;
+  background: #1a1a1a;
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-container h2 {
+  margin-bottom: 8px;
+}
+
+.register-container input {
+  height: 42px;
+  padding: 0 12px;
+
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+
+  color: white;
+  font-size: 0.95rem;
+}
+
+.register-container input:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.register-container button {
+  height: 42px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-container button:hover {
+  background: #2563eb;
+}
