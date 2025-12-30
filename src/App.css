@@ -263,14 +263,14 @@ section {
 
 .stats-left {
   flex: 1;
-  max-height: 80vh;      
+  max-height: 80vh;
   overflow-y: auto;
   padding-right: 8px;
 }
 
 .stats-right {
   flex: 1;
-  height: 80vh;          
+  height: 80vh;
 }
 
 
@@ -386,7 +386,7 @@ section {
 
 .login-actions {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin-top: 12px;
   align-items: center;
   gap: 8px;
@@ -395,7 +395,7 @@ section {
 .google-btn {
   flex: 1;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
 
 .register-btn {
@@ -403,7 +403,8 @@ section {
   display: flex;
   background: transparent;
   display: flex;
-  align-items: center; 
+  align-items: center;
+  justify-content: center;
   border: none;
   color: #007bff;
   cursor: pointer;
