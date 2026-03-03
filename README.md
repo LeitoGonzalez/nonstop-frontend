@@ -1,42 +1,51 @@
-# Nonstop Typing App
+# Nonstop Typing App - Frontend
 
-Aplicación web para practicar mecanografía de forma continua, enfocada en mejorar velocidad, precisión y consistencia.
+[![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](#) [![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](#)
+[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat&logo=vite&logoColor=FFD62E)](#)
 
-El proyecto permite realizar sesiones de escritura, registrar estadísticas y visualizar el progreso a lo largo del tiempo mediante gráficos.
+> **Demo en vivo:** [Tu Link de Vercel Acá](https://nonstop-typingapp.vercel.app/)
+
+Aplicación web para practicar mecanografía de forma continua, enfocada en mejorar la velocidad, precisión y consistencia del usuario. Permite realizar sesiones de escritura, registrar estadísticas y visualizar el progreso a lo largo del tiempo mediante gráficos interactivos.
+
+El backend de este proyecto (API y persistencia de datos) está desarrollado en **Django** y se encuentra desplegado en **Render**. Puedes encontrar el repositorio del backend [aquí](https://github.com/LeitoGonzalez/nonstop-backend).
+
+---
 
 ## Funcionalidades
 
-- Práctica de mecanografía en sesiones continuas
-- Medición de WPM, precisión, errores y puntaje
-- Historial de resultados por sesión
-- Gráfico de barras con evolución del puntaje
-- Autenticación de usuarios (login y registro)
-- Soporte para múltiples idiomas
-- Uso sin cuenta mediante almacenamiento local
+- **Práctica continua:** Sesiones de mecanografía ininterrumpidas.
+- **Métricas detalladas:** Medición en tiempo real de WPM (palabras por minuto), precisión, cantidad de errores y puntaje final.
+- **Historial y progreso:** Registro de resultados por sesión y gráfico de barras mostrando la evolución del puntaje.
+- **Autenticación:** Sistema de registro y login de usuarios.
+- **Internacionalización:** Soporte para múltiples idiomas.
+- **Modo Offline/Local:** Posibilidad de usar la aplicación sin cuenta mediante almacenamiento local (`localStorage`).
 
-![Pantalla de inicio](src/assets/screenshot1.png)
-![Estadísticas](src/assets/screenshot2.png)
+---
 
-## Tecnologías utilizadas
+## Tecnologías Utilizadas
 
-### Frontend
-- React
-- Vite
-- React Router
-- Chart.js
-- CSS puro
+- **Core:** React, Vite
+- **Enrutamiento:** React Router
+- **Visualización de Datos:** Chart.js
+- **Estilos:** CSS puro
 
-### Backend
-- Django
-- Django REST Framework
-- JWT para autenticación
+---
 
-## Estructura general
+## Modos de Uso
 
-El frontend y el backend se manejan como proyectos separados:
+La aplicación está diseñada para ser flexible y puede funcionar de dos maneras:
 
-- `nonstop-Frontend`: interfaz de usuario
-- `nonstop-Backend`: API y persistencia de datos
+### 1. Sin backend (Modo Local)
+- Ideal para pruebas rápidas.
+- Las estadísticas y el historial se guardan en el `localStorage` del navegador.
+- No requiere iniciar sesión.
+
+### 2. Con backend activo (Recomendado)
+- Se habilita el registro y el login.
+- Los resultados se asocian a cada usuario.
+- El historial se sincroniza y se obtiene directamente desde la API.
+
+---
 
 ## Instalación del frontend
 
