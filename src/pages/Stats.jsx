@@ -23,11 +23,12 @@ function Stats({ user }) {
 
     useEffect(() => {
         if (user) {
-            fetch('${import.meta.env.VITE_API_URL}/results/history/', {
+            fetch(`${import.meta.env.VITE_API_URL}/results/history/`, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("access")}`
-                }
+                    Authorization: `Bearer ${localStorage.getItem("access")}`,
+                },
             })
+
                 .then(res => res.json())
                 .then(data => setStats(data))
         } else {

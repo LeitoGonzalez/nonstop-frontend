@@ -12,11 +12,12 @@ function Login({ setUser }) {
     const token = credentialResponse.credential;
 
     try {
-      const res = await fetch('${import.meta.env.VITE_API_URL}/api/google-login/', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/google-login/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token }),
       });
+
 
       if (!res.ok) throw new Error("Error validando token");
 
@@ -53,11 +54,12 @@ function Login({ setUser }) {
     setError("");
 
     try {
-      const res = await fetch('${import.meta.env.VITE_API_URL}/api/token/', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/token/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
+
 
       if (!res.ok) throw new Error("Credenciales inválidas");
 

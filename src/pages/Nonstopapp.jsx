@@ -129,14 +129,15 @@ function Nonstopapp({ user, onLogout }) {
                         }
 
                         if (user) {
-                            fetch('${import.meta.env.VITE_API_URL}/results/', {
+                            fetch(`${import.meta.env.VITE_API_URL}/results/`, {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",
-                                    Authorization: `Bearer ${localStorage.getItem("access")}`
+                                    Authorization: `Bearer ${localStorage.getItem("access")}`,
                                 },
-                                body: JSON.stringify(result)
-                            })
+                                body: JSON.stringify(result),
+                            });
+
                         } else {
                             const localStats = JSON.parse(localStorage.getItem("stats")) || []
                             localStats.unshift(result)
