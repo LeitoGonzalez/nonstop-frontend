@@ -3,7 +3,7 @@
 [![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](#) [![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](#)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat&logo=vite&logoColor=FFD62E)](#)
 
-> **Demo en vivo:** [Tu Link de Vercel Acá](https://nonstop-typingapp.vercel.app/)
+> [Demo en vivo](https://nonstop-typingapp.vercel.app/)
 
 Aplicación web para practicar mecanografía de forma continua, enfocada en mejorar la velocidad, precisión y consistencia del usuario. Permite realizar sesiones de escritura, registrar estadísticas y visualizar el progreso a lo largo del tiempo mediante gráficos interactivos.
 
